@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shadow Network Client - Play Minecraft 1.12 in your browser">
+    <meta name="keywords" content="eaglercraft, minecraft, 1.12, 1.12.2, shadow network">
+    <title>Shadow Network Client</title>
+    <link type="image/png" rel="shortcut icon" href="favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            margin-bottom: 3rem;
+        }
+
+        .client-cards {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            width: 300px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(0, 212, 255, 0.5);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.2);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #00d4ff;
+        }
+
+        .card p {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .card .badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .feature h3 {
+            color: #00d4ff;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .feature p {
+            color: #808080;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            color: #606060;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .client-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shadow Network Client</h1>
+        <p class="subtitle">Play Minecraft 1.12.2 in your browser</p>
+
+        <div class="client-cards">
+            <a href="shadowjs/" class="card">
+                <div class="card-icon">⚡</div>
+                <h2>JavaScript Version</h2>
+                <p>Classic JavaScript-based client. Compatible with most browsers and offers reliable performance.</p>
+                <span class="badge">Recommended</span>
+            </a>
+
+            <a href="shadowwasm/" class="card">
+                <div class="card-icon">🚀</div>
+                <h2>WASM Version</h2>
+                <p>WebAssembly-powered client with enhanced performance and modern optimization.</p>
+                <span class="badge">High Performance</span>
+            </a>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>🎮 Full Minecraft 1.12.2</h3>
+                <p>Complete gameplay experience with all features</p>
+            </div>
+            <div class="feature">
+                <h3>🌐 Multiplayer Support</h3>
+                <p>Connect to Shadow Network servers</p>
+            </div>
+            <div class="feature">
+                <h3>💾 World Saves</h3>
+                <p>Your worlds are saved locally in your browser</p>
+            </div>
+            <div class="feature">
+                <h3>🔒 No Download Required</h3>
+                <p>Play instantly in your web browser</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Shadow Network Client | <a href="https://github.com/pxdns/shadownnet" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+</body>
+</html>
