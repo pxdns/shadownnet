@@ -249,6 +249,118 @@
             transform: translateX(0);
         }
 
+        /* Features Section */
+        .features-section {
+            margin-top: 6rem;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .features-title {
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 3rem;
+            letter-spacing: -0.03em;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: #666;
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Version & Changelog Section */
+        .info-section {
+            margin-top: 6rem;
+            max-width: 800px;
+            width: 100%;
+            padding: 30px;
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 12px;
+        }
+
+        .info-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .version-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .version-number {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #888;
+        }
+
+        .version-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .changelog-list {
+            list-style: none;
+        }
+
+        .changelog-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #222;
+        }
+
+        .changelog-item:last-child {
+            border-bottom: none;
+        }
+
+        .changelog-date {
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .changelog-description {
+            color: #888;
+            line-height: 1.5;
+        }
+
         footer {
             margin-top: 4rem;
             color: #444;
@@ -324,6 +436,56 @@
                 <p>WebAssembly online version</p>
                 <span class="arrow">→</span>
             </a>
+        </div>
+
+        <div class="features-section">
+            <h2 class="features-title">Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h4>Browser-Based</h4>
+                    <p>Play Minecraft 1.12.2 directly in your browser without installation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h4>Fast Loading</h4>
+                    <p>Quick startup with optimized assets and streaming technology</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h4>Multiplayer Ready</h4>
+                    <p>Join servers and play with friends online</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h4>Offline Mode</h4>
+                    <p>Download for offline play with complete embedded assets</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h4>WASM Powered</h4>
+                    <p>WebAssembly version for enhanced performance</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h4>Custom Skins</h4>
+                    <p>Upload and use custom skins in-game</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3 class="info-title">Version & Changelog</h3>
+            <div class="version-info">
+                <span class="version-number">v1.0.0</span>
+                <span class="version-date">April 28, 2026</span>
+            </div>
+            <ul class="changelog-list">
+                <li class="changelog-item">
+                    <div class="changelog-date">April 28, 2026</div>
+                    <div class="changelog-description">Initial release - Added landing page with intro animation, 4 client options (JS/WASM offline & online), features section, and version tracking</div>
+                </li>
+            </ul>
         </div>
 
         <footer>
